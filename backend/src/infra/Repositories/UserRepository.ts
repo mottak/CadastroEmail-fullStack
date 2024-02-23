@@ -17,5 +17,18 @@ export default class UserRepository implements IUserRepo {
   });
     return user;
   }
+  
+  async findAll(): Promise<IUser[]> {
+    const users = await prisma.user.findMany({});
+    return users
+  }
+
+  async delete(id: IUser['id']): Promise<void> {
+    const user = await prisma.user.delete({
+      where: {
+        id,
+      }
+    });
+  }
 
 }
