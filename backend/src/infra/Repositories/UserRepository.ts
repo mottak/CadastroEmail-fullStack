@@ -1,7 +1,7 @@
 import IUserRepo from '../../interfaces/IUserRepo';
-import INewUser from '../../interfaces/IUser';
 import { prisma } from '../database/prismaClient';
 import IUser from '../../interfaces/IUser';
+import INewUser from '../../interfaces/INewUser';
 
 
 export default class UserRepository implements IUserRepo {

@@ -1,15 +1,16 @@
 import IUserService from '../interfaces/IUserService';
 import IUserRepo from '../interfaces/IUserRepo';
 import IUser from '../interfaces/IUser';
+import INewUser from '../interfaces/INewUser';
 
-export default class UserService implements IUserService{
+export default class UserService implements IUserService {
   private userRepo: IUserRepo;
 
   constructor(userRepo: IUserRepo) {
     this.userRepo = userRepo;
   }
   
-  async add(User: IUser) {
+  async add(User: INewUser) {
     const newUser = await this.userRepo.add(User);
     return newUser
   };

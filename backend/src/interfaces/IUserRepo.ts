@@ -1,5 +1,5 @@
 import IUser from './IUser'
-import INewUser from './IUser'
+import INewUser from './INewUser';
 
 export default interface IUserRepo {
   add(data: INewUser): Promise<IUser>
