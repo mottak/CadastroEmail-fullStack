@@ -2,6 +2,7 @@ import express from 'express';
 import 'express-async-errors'
 import { errorMiddleware } from './middleware/errorMiddleware';
 import userRoutes from './routes/userRoutes';
+import 'dotenv/config'
 
 const port = process.env.PORT || 3001
 

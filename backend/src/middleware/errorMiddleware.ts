@@ -10,6 +10,8 @@ export const errorMiddleware = (
   next: NextFunction
 ) => {
 
+  console.error(err);
+
   if (err instanceof Joi.ValidationError) {
     return res.status(400).json({ message: err.message })
   }
