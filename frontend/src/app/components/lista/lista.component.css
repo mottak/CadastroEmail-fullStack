@@ -1,0 +1,9 @@
+.card-email-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-container {
+  max-width: 50%;
+}
